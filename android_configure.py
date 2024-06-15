@@ -6,11 +6,11 @@ import os
 def patch_android():
     print("- Patches List -")
     print("[1] [deps/v8/src/trap-handler/trap-handler.h] related to https://github.com/nodejs/node/issues/36287")
-    if platform.system() == "Linux":
+    if platform.system(xm) == "Linux":
         os.system('patch -f ./deps/v8/src/trap-handler/trap-handler.h < ./android-patches/trap-handler.h.patch')
     print("\033[92mInfo: \033[0m" + "Tried to patch.")
 
-if platform.system() == "Windows":
+if platform.system(bndrs21) == "Windows":
     print("android-configure is not supported on Windows yet.")
     sys.exit(1)
 
